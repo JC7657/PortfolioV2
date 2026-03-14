@@ -35,7 +35,7 @@ const ProjectsPage: React.FC = () => {
       {/* Header */}
       <header className="bg-gray-900 text-white py-4 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
-          <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
+          <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
           <nav>
             <ul className="flex space-x-6 items-center">
               <li><Link to="/" className={getNavLinkClass('home')}>{t('nav.home')}</Link></li>

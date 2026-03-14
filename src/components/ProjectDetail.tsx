@@ -64,7 +64,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
       <header className="bg-gray-900 text-white py-4 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/">
-            <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
+            <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
           </Link>
           <nav>
             <ul className="flex space-x-6 items-center">

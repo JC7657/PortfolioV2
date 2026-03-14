@@ -41,13 +41,13 @@
           "Panel de gestión de pedidos",
           "Panel de gestión de productos"
         ],
-        "image": "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Home.png",
+        "image": "/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Home.png",
         "screenshots": [
-          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Home.png",
-          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Profile.png",
-          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_ProductUpload.png",
-          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_AdminHome.png",
-          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_AdminManager.png"
+          "/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Home.png",
+          "/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Profile.png",
+          "/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_ProductUpload.png",
+          "/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_AdminHome.png",
+          "/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_AdminManager.png"
         ],
         "liveUrl": "",
         "repoUrl": "https://github.com/JC7657/Frontend-E-Commerce"
