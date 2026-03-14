@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
 
 interface ProjectDetailProps {
-  projectId: string;
+  projectId?: string;
 }
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId }) => {
+  const params = useParams<{ projectId: string }>();
+  const projectId = propProjectId || params.projectId;
+  const { t, i18n } = useTranslation();
   const [currentPage, setCurrentPage] = useState('projects');
+  const isSpanish = i18n.resolvedLanguage === 'es';
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
+  };
 
   useEffect(() => {
     const path = window.location.pathname;
@@ -94,8 +104,8 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Project Not Found</h1>
-          <a href="/home" className="text-blue-600 hover:text-blue-800">← Back to Home</a>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">{t('projectDetail.notFound')}</h1>
+          <Link to="/" className="text-blue-600 hover:text-blue-800">{t('projectDetail.backToHome')}</Link>
         </div>
       </div>
     );
@@ -108,9 +118,25 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
         <div className="container mx-auto flex justify-between items-center">
           <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
           <nav>
-            <ul className="flex space-x-6">
-              <li><a href="/home" className={getNavLinkClass('home')}>Home</a></li>
-              <li><a href="/projects" className={getNavLinkClass('projects')}>Projects</a></li>
+            <ul className="flex space-x-6 items-center">
+              <li><Link to="/" className={getNavLinkClass('home')}>{t('nav.home')}</Link></li>
+              <li><Link to="/projects" className={getNavLinkClass('projects')}>{t('nav.projects')}</Link></li>
+              <li>
+                <button
+                  onClick={toggleLanguage}
+                  className="ml-4 relative inline-flex h-8 w-16 items-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 transition-colors hover:from-blue-600 hover:to-purple-700"
+                >
+                  <span className={`absolute left-2 text-xs font-thin ${isSpanish ? 'text-white/40' : 'text-white font-bold'}`}>EN</span>
+                  <span className={`absolute right-2 text-xs font-thin ${isSpanish ? 'text-white font-bold' : 'text-white/40'}`}>ES</span>
+                  <span
+                    className={`${
+                      isSpanish ? 'translate-x-9' : 'translate-x-1'
+                    } inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-bold text-gray-900 transition-transform`}
+                  >
+                    {isSpanish ? 'ES' : 'EN'}
+                  </span>
+                </button>
+              </li>
             </ul>
           </nav>
         </div>
@@ -124,14 +150,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
 
         <ScrollReveal delay={200}>
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Overview</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-4">{t('projectDetail.overview')}</h2>
             <p className="text-lg text-gray-700 leading-relaxed">{project.overview}</p>
           </section>
         </ScrollReveal>
 
         <ScrollReveal delay={400}>
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6">Technologies Used</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.technologies')}</h2>
             <div className="flex flex-wrap gap-3">
               {project.technologies.map((tech, index) => (
                 <span key={index} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
@@ -144,7 +170,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
 
         <ScrollReveal delay={600}>
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6">Key Features</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.features')}</h2>
             <ul className="space-y-3">
               {project.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -158,7 +184,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
 
         <ScrollReveal delay={800}>
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6">Screenshots</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.screenshots')}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {project.screenshots.map((screenshot, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-4">
@@ -173,7 +199,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
 
         <ScrollReveal delay={1000}>
           <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6">Links</h2>
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.links')}</h2>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href={project.liveUrl} 
@@ -181,7 +207,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center"
               >
-                View Live Project →
+                {t('projectDetail.viewLive')}
               </a>
               <a 
                 href={project.repoUrl} 
@@ -189,7 +215,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId }) => {
                 rel="noopener noreferrer"
                 className="border-2 border-gray-800 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl text-center"
               >
-                View Repository →
+                {t('projectDetail.viewRepo')}
               </a>
             </div>
           </section>

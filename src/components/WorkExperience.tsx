@@ -3,26 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 const WorkExperience: React.FC = () => {
   const { t } = useTranslation();
-  const experiences = [
-    {
-      position: 'Customer Support Engineer (Intern)',
-      company: 'ServiceRocket',
-      period: 'Previous',
-      description: 'Technical support for enterprise clients using Atlassian tools (JIRA, Jira Service Desk, Confluence). Specialized in incident resolution, process automation, and professional client communication.'
-    },
-    {
-      position: 'Developer (Applications Division)',
-      company: 'SONDA',
-      period: 'Previous',
-      description: 'Full-stack development using .NET Framework, Java, C#, and SQL. Built enterprise applications with VBA integration and version control using Git.'
-    },
-    {
-      position: 'Computer Engineering Student',
-      company: 'INACAP & 4Geeks Academy Chile',
-      period: 'Academic Training',
-      description: 'Comprehensive training in web development (HTML, CSS, JavaScript, React.js, Node.js), cloud technologies (AWS), data analysis, and agile methodologies.'
-    }
-  ];
+  const experiences = t('experience.jobs', { returnObjects: true }) as Array<{
+    position: string;
+    company: string;
+    period: string;
+    description: string;
+  }>;
 
   return (
     <section id="experience" className="py-20 px-6 bg-white">

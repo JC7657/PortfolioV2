@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+
+const CV_URLS = {
+  en: 'https://docs.google.com/document/d/1vTrm23iDnV9MJU-W_unKA7SwPrSy7ADdzx6ylicITJE/edit?tab=t.0#heading=h.upetirzakp20',
+  es: 'https://docs.google.com/document/d/1GKhgva-rrV38QVZ1ife278JgRtmlngYSxlfpWH3TZVU/edit?tab=t.0#heading=h.upetirzakp20'
+};
 
 const Hero: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger animations on mount
     setTimeout(() => setTextVisible(true), 100);
     setTimeout(() => setIsVisible(true), 300);
   }, []);
@@ -68,12 +73,17 @@ const Hero: React.FC = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <Link to="/projects" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center">
             {t('hero.viewWork')}
-          </button>
-          <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            {t('hero.getInTouch')}
-          </button>
+          </Link>
+          <a 
+            href={i18n.language === 'es' ? CV_URLS.es : CV_URLS.en} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center"
+          >
+            {t('hero.downloadCV')}
+          </a>
         </div>
       </div>
     </section>

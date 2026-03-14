@@ -7,7 +7,7 @@
     "title": "IT Engineer | Full-Stack Developer | Technical Support",
     "subtitle": "Crafting robust and scalable web applications and software with a focus on clean architecture and optimal user experiences.",
     "viewWork": "View My Work",
-    "getInTouch": "Get In Touch"
+    "downloadCV": "Download CV"
   },
   "about": {
     "title": "About Me",
@@ -28,14 +28,56 @@
     "title": "Projects",
     "subtitle": "A collection of my work showcasing full-stack development, cloud architecture, and enterprise solutions."
   },
+  "projectDetail": {
+    "overview": "Overview",
+    "technologies": "Technologies Used",
+    "features": "Key Features",
+    "screenshots": "Screenshots",
+    "links": "Links",
+    "viewLive": "View Live Project →",
+    "viewRepo": "View Repository →",
+    "notFound": "Project Not Found",
+    "backToHome": "← Back to Home"
+  },
   "experience": {
-    "title": "Work Experience"
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "position": "Customer Support Engineer (Intern)",
+        "company": "ServiceRocket",
+        "period": "Previous",
+        "description": "Technical support for enterprise clients using Atlassian tools (JIRA, Jira Service Desk, Confluence). Specialized in incident resolution, process automation, and professional client communication."
+      },
+      {
+        "position": "Developer (Applications Division)",
+        "company": "SONDA",
+        "period": "Previous",
+        "description": "Full-stack development using .NET Framework, Java, C#, and SQL. Built enterprise applications with VBA integration and version control using Git."
+      },
+      {
+        "position": "Computer Engineering Student",
+        "company": "INACAP & 4Geeks Academy Chile",
+        "period": "Academic Training",
+        "description": "Comprehensive training in web development (HTML, CSS, JavaScript, React.js, Node.js), cloud technologies (AWS), data analysis, and agile methodologies."
+      }
+    ]
   },
   "cta": {
     "title": "Let's Work Together",
     "subtitle": "I'm actively seeking challenging roles where I can apply my skills and grow. Let's discuss how I can contribute to your team.",
-    "contact": "Get In Touch",
-    "resume": "Download Resume"
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again.",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Your message..."
+    },
+    "socials": "Connect with me"
   },
   "footer": {
     "copyright": "Juan Carlos Jerez Velásquez. All rights reserved.",

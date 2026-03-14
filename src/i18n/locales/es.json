@@ -7,7 +7,7 @@
     "title": "Ingeniero en TI | Desarrollador Full-Stack | Soporte Técnico",
     "subtitle": "Creando aplicaciones web y software robustos y escalables con un enfoque en arquitectura limpia y experiencias de usuario óptimas.",
     "viewWork": "Ver Mi Trabajo",
-    "getInTouch": "Contáctame"
+    "downloadCV": "Descargar CV"
   },
   "about": {
     "title": "Sobre Mí",
@@ -28,14 +28,56 @@
     "title": "Proyectos",
     "subtitle": "Una colección de mi trabajo que muestra desarrollo full-stack, arquitectura en la nube y soluciones empresariales."
   },
+  "projectDetail": {
+    "overview": "Resumen",
+    "technologies": "Tecnologías Utilizadas",
+    "features": "Características Principales",
+    "screenshots": "Capturas de Pantalla",
+    "links": "Enlaces",
+    "viewLive": "Ver Proyecto en Vivo →",
+    "viewRepo": "Ver Repositorio →",
+    "notFound": "Proyecto No Encontrado",
+    "backToHome": "← Volver al Inicio"
+  },
   "experience": {
-    "title": "Experiencia Laboral"
+    "title": "Experiencia Laboral",
+    "jobs": [
+      {
+        "position": "Ingeniero de Soporte al Cliente (Practicante)",
+        "company": "ServiceRocket",
+        "period": "Anterior",
+        "description": "Soporte técnico para clientes empresariales usando herramientas Atlassian (JIRA, Jira Service Desk, Confluence). Especializado en resolución de incidentes, automatización de procesos y comunicación profesional con clientes."
+      },
+      {
+        "position": "Desarrollador (División de Aplicaciones)",
+        "company": "SONDA",
+        "period": "Anterior",
+        "description": "Desarrollo full-stack usando .NET Framework, Java, C# y SQL. Creé aplicaciones empresariales con integración VBA y control de versiones usando Git."
+      },
+      {
+        "position": "Estudiante de Ingeniería en Computación",
+        "company": "INACAP & 4Geeks Academy Chile",
+        "period": "Formación Académica",
+        "description": "Capacitación integral en desarrollo web (HTML, CSS, JavaScript, React.js, Node.js), tecnologías en la nube (AWS), análisis de datos y metodologías ágiles."
+      }
+    ]
   },
   "cta": {
     "title": "Trabajemos Juntos",
     "subtitle": "Estoy buscando activamente roles desafiantes donde pueda aplicar mis habilidades y crecer. Hablemos de cómo puedo contribuir a tu equipo.",
-    "contact": "Contáctame",
-    "resume": "Descargar Currículum"
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente!",
+      "error": "Error al enviar. Por favor intenta de nuevo.",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@correo.com",
+      "messagePlaceholder": "Tu mensaje..."
+    },
+    "socials": "Conéctate conmigo"
   },
   "footer": {
     "copyright": "Juan Carlos Jerez Velásquez. Todos los derechos reservados.",

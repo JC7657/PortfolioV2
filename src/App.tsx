@@ -10,6 +10,7 @@ import WorkExperience from './components/WorkExperience';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ProjectsPage from './components/ProjectsPage';
+import ProjectDetail from './components/ProjectDetail';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           </div>
         } />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects/:projectId" element={<ProjectDetail />} />
       </Routes>
     </Router>
   );
