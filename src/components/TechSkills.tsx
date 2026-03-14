@@ -1,9 +1,11 @@
 import React from 'react';
 import ScrollReveal from './ScrollReveal';
+import { useTranslation } from 'react-i18next';
 
 
 
 const TechSkills: React.FC = () => {
+  const { t } = useTranslation();
   const technologies = [
     { name: 'React.js', icon: '⚛️' },
     { name: 'TypeScript', icon: '📘' },
@@ -49,12 +51,12 @@ const TechSkills: React.FC = () => {
     <section id="tech" className="py-20 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Technologies & Skills</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">{t('skills.title')}</h2>
         </ScrollReveal>
         
         <ScrollReveal delay={200}>
           <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-700">Technologies</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-700">{t('skills.technologies')}</h3>
 <div className="flex flex-wrap gap-3">
             {technologies.map((tech, index) => (
               <span key={index} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
@@ -68,7 +70,7 @@ const TechSkills: React.FC = () => {
         
         <ScrollReveal delay={400}>
           <div>
-          <h3 className="text-2xl font-semibold mb-6 text-gray-700">Professional Skills</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-gray-700">{t('skills.professional')}</h3>
 <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
               <span key={index} className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">

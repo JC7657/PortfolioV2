@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos"
+  },
+  "hero": {
+    "title": "Ingeniero en TI | Desarrollador Full-Stack | Soporte Técnico",
+    "subtitle": "Creando aplicaciones web y software robustos y escalables con un enfoque en arquitectura limpia y experiencias de usuario óptimas.",
+    "viewWork": "Ver Mi Trabajo",
+    "getInTouch": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "p1": "Estudiante de Ingeniería en Computación con experiencia en desarrollo de software y soporte técnico empresarial. He prestado soporte a empresas internacionales como Meta, Cloudera, Lionpoint y Skechers, desarrollando fuertes habilidades en resolución de problemas y comunicación profesional.",
+    "p2": "Mi stack tecnológico incluye JavaScript, TypeScript, React, Node.js, MongoDB, MySQL, Django y .NET, con experiencia en Git, entornos Linux y flujos de trabajo de desarrollo modernos.",
+    "p3": "Me impulsado por la calidad del código, la escalabilidad y la mejora continua, siempre buscando entregar soluciones confiables y eficientes que generen impacto real."
+  },
+  "skills": {
+    "title": "Tecnologías y Habilidades",
+    "technologies": "Tecnologías",
+    "professional": "Habilidades Profesionales"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "viewDetails": "Ver Detalles del Proyecto →"
+  },
+  "projectsPage": {
+    "title": "Proyectos",
+    "subtitle": "Una colección de mi trabajo que muestra desarrollo full-stack, arquitectura en la nube y soluciones empresariales."
+  },
+  "experience": {
+    "title": "Experiencia Laboral"
+  },
+  "cta": {
+    "title": "Trabajemos Juntos",
+    "subtitle": "Estoy buscando activamente roles desafiantes donde pueda aplicar mis habilidades y crecer. Hablemos de cómo puedo contribuir a tu equipo.",
+    "contact": "Contáctame",
+    "resume": "Descargar Currículum"
+  },
+  "footer": {
+    "copyright": "Juan Carlos Jerez Velásquez. Todos los derechos reservados.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Correo"
+  }
+}

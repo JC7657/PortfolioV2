@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation();
   const projects = [
     {
       id: 'enterprise-support-system',
@@ -27,7 +29,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">{t('projects.title')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
@@ -41,7 +43,7 @@ const Projects: React.FC = () => {
                 ))}
               </div>
 <a href={project.link} className="text-blue-600 hover:text-blue-800 font-medium">
-            View Project Details →
+            {t('projects.viewDetails')}
           </a>
             </div>
           ))}

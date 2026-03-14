@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [textVisible, setTextVisible] = useState(false);
 
@@ -50,7 +52,7 @@ const Hero: React.FC = () => {
             textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          IT Engineer | Full-Stack Developer | Technical Support
+          {t('hero.title')}
         </p>
         
         <p 
@@ -58,7 +60,7 @@ const Hero: React.FC = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          Crafting robust and scalable web applications and software with a focus on clean architecture and optimal user experiences.
+          {t('hero.subtitle')}
         </p>
         
         <div 
@@ -67,10 +69,10 @@ const Hero: React.FC = () => {
           }`}
         >
           <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            View My Work
+            {t('hero.viewWork')}
           </button>
           <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            Get In Touch
+            {t('hero.getInTouch')}
           </button>
         </div>
       </div>

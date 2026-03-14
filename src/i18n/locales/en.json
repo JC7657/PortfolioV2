@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects"
+  },
+  "hero": {
+    "title": "IT Engineer | Full-Stack Developer | Technical Support",
+    "subtitle": "Crafting robust and scalable web applications and software with a focus on clean architecture and optimal user experiences.",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Computer Engineering student with experience in software development and enterprise technical support. I've supported international companies like Meta, Cloudera, Lionpoint, and Skechers, developing strong skills in troubleshooting and professional communication.",
+    "p2": "My technical stack includes JavaScript, TypeScript, React, Node.js, MongoDB, MySQL, Django, and .NET, with experience in Git, Linux environments, and modern development workflows.",
+    "p3": "I'm driven by code quality, scalability, and continuous improvement, always looking to deliver reliable and efficient solutions that generate real impact."
+  },
+  "skills": {
+    "title": "Technologies & Skills",
+    "technologies": "Technologies",
+    "professional": "Professional Skills"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewDetails": "View Project Details →"
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "subtitle": "A collection of my work showcasing full-stack development, cloud architecture, and enterprise solutions."
+  },
+  "experience": {
+    "title": "Work Experience"
+  },
+  "cta": {
+    "title": "Let's Work Together",
+    "subtitle": "I'm actively seeking challenging roles where I can apply my skills and grow. Let's discuss how I can contribute to your team.",
+    "contact": "Get In Touch",
+    "resume": "Download Resume"
+  },
+  "footer": {
+    "copyright": "Juan Carlos Jerez Velásquez. All rights reserved.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  }
+}
