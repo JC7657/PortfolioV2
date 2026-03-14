@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="mb-4 md:mb-0">&copy; 2025 {t('footer.copyright')}</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-blue-400">{t('footer.linkedin')}</a>
-            <a href="#" className="hover:text-blue-400">{t('footer.github')}</a>
-            <a href="#" className="hover:text-blue-400">{t('footer.email')}</a>
+            <a href="#" className="hover:text-purple-400">{t('footer.linkedin')}</a>
+            <a href="#" className="hover:text-purple-400">{t('footer.github')}</a>
+            <a href="#" className="hover:text-purple-400">{t('footer.email')}</a>
           </div>
         </div>
       </div>

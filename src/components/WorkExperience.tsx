@@ -16,9 +16,9 @@ const WorkExperience: React.FC = () => {
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">{t('experience.title')}</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="border-l-4 border-blue-500 pl-6">
+            <div key={index} className="border-l-4 border-purple-500 pl-6">
               <h3 className="text-xl font-semibold text-gray-800">{exp.position}</h3>
-              <p className="text-blue-600 font-medium mb-2">{exp.company} • {exp.period}</p>
+              <p className="text-purple-600 font-medium mb-2">{exp.company} • {exp.period}</p>
               <p className="text-gray-600">{exp.description}</p>
             </div>
           ))}

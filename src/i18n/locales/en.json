@@ -6,7 +6,7 @@
   "hero": {
     "title": "IT Engineer | Full-Stack Developer | Technical Support",
     "subtitle": "Crafting robust and scalable web applications and software with a focus on clean architecture and optimal user experiences.",
-    "viewWork": "View My Work",
+    "viewWork": "My Projects",
     "downloadCV": "Download CV"
   },
   "about": {
@@ -22,11 +22,41 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "viewDetails": "View Project Details →"
+    "viewDetails": "View Project Details →",
+    "list": [
+      {
+        "id": "artesano-market",
+        "title": "ArtesanoMarket",
+        "description": "E-commerce web application for handcrafted products. Features product catalog, shopping cart, electronic invoice generation, user authentication, and profile customization. Users can publish their own products. Includes protected admin panel for managing users, orders, and products.",
+        "technologies": ["React", "Vite", "TailwindCSS", "Express", "MongoDB", "Cloudinary", "Passport"],
+        "features": [
+          "Product catalog with search and filtering",
+          "Shopping cart functionality",
+          "Electronic invoice generation",
+          "User authentication and authorization",
+          "Profile customization with profile photo",
+          "User product publishing",
+          "Protected admin routes",
+          "User management panel",
+          "Order management panel",
+          "Product management panel"
+        ],
+        "image": "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Home.png",
+        "screenshots": [
+          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Home.png",
+          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_Profile.png",
+          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_ProductUpload.png",
+          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_AdminHome.png",
+          "/src/assets/Projects_Screenshots/EnlaceArtesano_Screenshots/Screenshot_AdminManager.png"
+        ],
+        "liveUrl": "",
+        "repoUrl": "https://github.com/JC7657/Frontend-E-Commerce"
+      }
+    ]
   },
   "projectsPage": {
     "title": "Projects",
-    "subtitle": "A collection of my work showcasing full-stack development, cloud architecture, and enterprise solutions."
+    "subtitle": "A showcase of my work in full-stack development and web applications."
   },
   "projectDetail": {
     "overview": "Overview",
@@ -77,7 +107,7 @@
       "emailPlaceholder": "your@email.com",
       "messagePlaceholder": "Your message..."
     },
-    "socials": "Connect with me"
+    "socials": "My socials"
   },
   "footer": {
     "copyright": "Juan Carlos Jerez Velásquez. All rights reserved.",

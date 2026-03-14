@@ -9,9 +9,9 @@ const Header: React.FC = () => {
   const getNavLinkClass = (page: string) => {
     const baseClass = "transition-colors duration-200";
     if (currentPage === page) {
-      return `${baseClass} text-blue-400 font-semibold`;
+      return `${baseClass} text-purple-400 font-semibold`;
     }
-    return `${baseClass} hover:text-blue-400`;
+    return `${baseClass} hover:text-purple-400`;
   };
 
   const isSpanish = i18n.resolvedLanguage === 'es';
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
             <li>
               <button
                 onClick={toggleLanguage}
-                className="ml-4 relative inline-flex h-8 w-16 items-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 transition-colors hover:from-blue-600 hover:to-purple-700"
+                className="ml-4 relative inline-flex h-8 w-16 items-center rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 transition-colors hover:from-purple-600 hover:to-indigo-700"
               >
                 <span className={`absolute left-2 text-xs font-thin ${isSpanish ? 'text-white/40' : 'text-white font-bold'}`}>EN</span>
                 <span className={`absolute right-2 text-xs font-thin ${isSpanish ? 'text-white font-bold' : 'text-white/40'}`}>ES</span>

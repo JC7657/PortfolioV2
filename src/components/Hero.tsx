@@ -18,9 +18,9 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white overflow-hidden">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 animate-pulse opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-500 animate-pulse opacity-50"></div>
       
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -73,14 +73,14 @@ const Hero: React.FC = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          <Link to="/projects" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center">
+          <Link to="/projects" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center">
             {t('hero.viewWork')}
           </Link>
           <a 
             href={i18n.language === 'es' ? CV_URLS.es : CV_URLS.en} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center"
+            className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-xl text-center"
           >
             {t('hero.downloadCV')}
           </a>

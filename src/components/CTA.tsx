@@ -56,7 +56,7 @@ const CTA: React.FC = () => {
               id="from_name"
               required
               placeholder={t('cta.form.namePlaceholder')}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
             />
           </div>
 
@@ -70,7 +70,7 @@ const CTA: React.FC = () => {
               id="from_email"
               required
               placeholder={t('cta.form.emailPlaceholder')}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
             />
           </div>
 
@@ -84,14 +84,14 @@ const CTA: React.FC = () => {
               required
               rows={5}
               placeholder={t('cta.form.messagePlaceholder')}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+            className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 hover:shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === 'sending' ? t('cta.form.sending') : t('cta.form.send')}
           </button>
@@ -111,7 +111,7 @@ const CTA: React.FC = () => {
               href="https://www.linkedin.com/in/jjerezv"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-700 transition-colors"
+              className="text-gray-600 hover:text-purple-700 transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
