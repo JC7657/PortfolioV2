@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path === '/' || path === '/home') {
-      setCurrentPage('home');
-    } else if (path.startsWith('/projects')) {
-      setCurrentPage('projects');
-    }
-  }, []);
+  const location = useLocation();
+  const currentPage = location.pathname === '/' ? 'home' : location.pathname.replace('/', '');
 
   const getNavLinkClass = (page: string) => {
     const baseClass = "transition-colors duration-200";
@@ -23,11 +15,13 @@ const Header: React.FC = () => {
   return (
     <header className="bg-gray-900 text-white py-4 px-6 fixed top-0 w-full z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
+        <Link to="/">
+          <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
+        </Link>
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="/home" className={getNavLinkClass('home')}>Home</a></li>
-            <li><a href="/projects" className={getNavLinkClass('projects')}>Projects</a></li>
+            <li><Link to="/" className={getNavLinkClass('home')}>Home</Link></li>
+            <li><Link to="/projects" className={getNavLinkClass('projects')}>Projects</Link></li>
           </ul>
         </nav>
       </div>

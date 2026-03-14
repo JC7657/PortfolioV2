@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ScrollReveal from './ScrollReveal';
 
 const ProjectsPage: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState('projects');
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/projects')) {
-      setCurrentPage('projects');
-    }
-  }, []);
+  const location = useLocation();
+  const currentPage = location.pathname.replace('/', '') || 'projects';
 
   const getNavLinkClass = (page: string) => {
     const baseClass = "transition-colors duration-200";
@@ -49,8 +43,8 @@ const ProjectsPage: React.FC = () => {
           <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-auto" />
           <nav>
             <ul className="flex space-x-6">
-              <li><a href="/home" className={getNavLinkClass('home')}>Home</a></li>
-              <li><a href="/projects" className={getNavLinkClass('projects')}>Projects</a></li>
+              <li><Link to="/" className={getNavLinkClass('home')}>Home</Link></li>
+              <li><Link to="/projects" className={getNavLinkClass('projects')}>Projects</Link></li>
             </ul>
           </nav>
         </div>
@@ -78,9 +72,9 @@ const ProjectsPage: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                <a href={project.link} className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link to={project.link} className="text-blue-600 hover:text-blue-800 font-medium">
                   View Project Details →
-                </a>
+                </Link>
               </div>
             </ScrollReveal>
           ))}

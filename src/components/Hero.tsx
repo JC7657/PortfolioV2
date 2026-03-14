@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          Computer Engineer | Full-Stack Developer | Technical Support
+          IT Engineer | Full-Stack Developer | Technical Support
         </p>
         
         <p 

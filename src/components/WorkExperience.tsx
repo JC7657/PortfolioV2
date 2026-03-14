@@ -3,9 +3,9 @@ import React from 'react';
 const WorkExperience: React.FC = () => {
   const experiences = [
     {
-      position: 'Customer Support Engineer (Intert)',
+      position: 'Customer Support Engineer (Intern)',
       company: 'ServiceRocket',
-      period: 'Present',
+      period: 'Previous',
       description: 'Technical support for enterprise clients using Atlassian tools (JIRA, Jira Service Desk, Confluence). Specialized in incident resolution, process automation, and professional client communication.'
     },
     {
