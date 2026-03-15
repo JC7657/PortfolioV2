@@ -51,6 +51,25 @@
         ],
         "liveUrl": "",
         "repoUrl": "https://github.com/JC7657/Frontend-E-Commerce"
+      },
+      {
+        "id": "maze-solver",
+        "title": "Solucionador de Laberintos",
+        "description": "Aplicación interactiva de resolución de laberintos que utiliza algoritmos BFS y DFS para encontrar salidas en laberintos ASCII. Los usuarios pueden generar laberintos aleatorios y observar cómo los algoritmos los resuelven paso a paso. Un proyecto académico que demuestra algoritmos de búsqueda de rutas.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [
+          "Generación de laberintos aleatorios",
+          "Algoritmo BFS (Breadth-First Search)",
+          "Algoritmo DFS (Depth-First Search)",
+          "Visualización paso a paso",
+          "Visualización de laberintos basada en ASCII"
+        ],
+        "image": "/MazeSolver_Screenshots/Screenshot_Laberinto.png",
+        "screenshots": [
+          "/MazeSolver_Screenshots/Screenshot_Laberinto.png"
+        ],
+        "liveUrl": "https://jc7657.github.io/Maze-solver/",
+        "repoUrl": "https://github.com/JC7657/Maze-solver"
       }
     ]
   },

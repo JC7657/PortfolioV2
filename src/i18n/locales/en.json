@@ -51,6 +51,25 @@
         ],
         "liveUrl": "",
         "repoUrl": "https://github.com/JC7657/Frontend-E-Commerce"
+      },
+      {
+        "id": "maze-solver",
+        "title": "Maze Solver",
+        "description": "Interactive maze solver application that uses BFS and DFS algorithms to find exits in ASCII labyrinths. Users can generate random mazes and watch the algorithms solve them step by step. An academic project demonstrating pathfinding algorithms.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "features": [
+          "Random maze generation",
+          "BFS (Breadth-First Search) algorithm",
+          "DFS (Depth-First Search) algorithm",
+          "Step-by-step visualization",
+          "ASCII-based labyrinth display"
+        ],
+        "image": "/MazeSolver_Screenshots/Screenshot_Laberinto.png",
+        "screenshots": [
+          "/MazeSolver_Screenshots/Screenshot_Laberinto.png"
+        ],
+        "liveUrl": "https://jc7657.github.io/Maze-solver/",
+        "repoUrl": "https://github.com/JC7657/Maze-solver"
       }
     ]
   },
