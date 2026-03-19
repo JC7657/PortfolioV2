@@ -12,7 +12,7 @@
   "about": {
     "title": "Sobre Mí",
     "p1": "Estudiante de Ingeniería en Computación con experiencia en desarrollo de software y soporte técnico empresarial. He prestado soporte a empresas internacionales como Meta, Cloudera, Lionpoint y Skechers, desarrollando fuertes habilidades en resolución de problemas y comunicación profesional.",
-    "p2": "Mi stack tecnológico incluye JavaScript, TypeScript, React, Node.js, MongoDB, MySQL, Django y .NET, con experiencia en Git, entornos Linux y flujos de trabajo de desarrollo modernos.",
+    "p2": "Mi stack tecnológico incluye JavaScript, TypeScript, React, Next.js Node.js, MongoDB, PostgreSQL, Django y .NET, con experiencia en Git, entornos Linux y flujos de trabajo de desarrollo modernos.",
     "p3": "Me impulsado por la calidad del código, la escalabilidad y la mejora continua, siempre buscando entregar soluciones confiables y eficientes que generen impacto real."
   },
   "skills": {

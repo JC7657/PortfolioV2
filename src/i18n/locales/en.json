@@ -12,7 +12,7 @@
   "about": {
     "title": "About Me",
     "p1": "Computer Engineering student with experience in software development and enterprise technical support. I've supported international companies like Meta, Cloudera, Lionpoint, and Skechers, developing strong skills in troubleshooting and professional communication.",
-    "p2": "My technical stack includes JavaScript, TypeScript, React, Node.js, MongoDB, MySQL, Django, and .NET, with experience in Git, Linux environments, and modern development workflows.",
+    "p2": "My technical stack includes JavaScript, TypeScript, React, Next.js, Node.js, MongoDB, PostgreSQL, Django, and .NET, with experience in Git, Linux environments, and modern development workflows.",
     "p3": "I'm driven by code quality, scalability, and continuous improvement, always looking to deliver reliable and efficient solutions that generate real impact."
   },
   "skills": {
