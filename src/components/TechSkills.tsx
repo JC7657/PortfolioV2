@@ -5,26 +5,26 @@ import {
   FaReact, FaJs, FaNodeJs, FaGitAlt, FaPython,
   FaLinux, FaJava, FaDocker, FaAws
 } from 'react-icons/fa';
-import { SiMongodb, SiMysql, SiDjango, SiDotnet, SiSharp, SiTypescript } from 'react-icons/si';
+import { SiMongodb, SiMysql, SiDjango, SiDotnet, SiTypescript, SiNextdotjs } from 'react-icons/si';
 
 const TechSkills: React.FC = () => {
   const { t } = useTranslation();
   const technologies = [
     { name: 'React', icon: FaReact, color: '#61DAFB' },
+    { name: 'Next.js', icon: SiNextdotjs, color: 'black'},
+    { name: 'JavaScript', icon: FaJs, color: '#F7DF1E' },
     { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
     { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
-    { name: 'JavaScript', icon: FaJs, color: '#F7DF1E' },
     { name: 'AWS', icon: FaAws, color: '#FF9900' },
     { name: 'Docker', icon: FaDocker, color: '#2496ED' },
     { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
     { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+    { name: 'Linux', icon: FaLinux, color: '#FCC624' },
     { name: 'Python', icon: FaPython, color: '#3776AB' },
     { name: 'Django', icon: SiDjango, color: '#092E20' },
     { name: '.NET', icon: SiDotnet, color: '#512BD4' },
     { name: 'Java', icon: FaJava, color: '#ED8B00' },
-    { name: 'C#', icon: SiSharp, color: '#239120' },
-    { name: 'Git', icon: FaGitAlt, color: '#F05032' },
-    { name: 'Linux', icon: FaLinux, color: '#FCC624' },
+    { name: 'Git', icon: FaGitAlt, color: '#F05032' }
   ];
 
   return (

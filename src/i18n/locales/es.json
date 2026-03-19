@@ -25,6 +25,27 @@
     "viewDetails": "Ver Detalles del Proyecto →",
     "list": [
       {
+        "id": "ygo-ai-link",
+        "title": "YGO Ai Link",
+        "description": "Aplicación web que combina una base de datos de cartas de Yu-Gi-Oh! con un asistente de chat impulsado por IA. Los usuarios pueden navegar y buscar en un extenso catálogo de cartas, chatear con un asistente de IA (Ai/Dark Ignis) para aprender sobre cartas, arquetipos, mecánicas y estrategias, y obtener explicaciones sobre conceptos como handtraps, omni negates, endboards, arquetipos de mazo y más.",
+        "technologies": ["Next.js 16", "React 19", "Tailwind CSS 4", "TypeScript", "Heroicons", "TanStack Query", "Express", "PostgreSQL", "Groq SDK", "Yugipedia API"],
+        "features": [
+          "Base de Datos de Cartas - Catálogo buscable con filtros por tipo, atributo, nivel, etc.",
+          "Asistente de Chat con IA - Respuestas contextuales impulsadas por Groq LLM",
+          "Conocimiento Dinámico - Obtiene información de arquetipos/estilos de juego desde Yugipedia con caché",
+          "Persistencia de Chat - Historial de chat guardado en localStorage",
+          "UI Responsiva - Ventana de chat expandible/colapsable con preguntas sugeridas"
+        ],
+        "image": "/YGOAiLink/Home.png",
+        "screenshots": [
+          "/YGOAiLink/Home.png",
+          "/YGOAiLink/CardPage.png",
+          "/YGOAiLink/AiChat.png"
+        ],
+        "liveUrl": "https://ygo-ai-link.vercel.app/",
+        "repoUrl": "https://github.com/JC7657/ygo-ai-link"
+      },
+      {
         "id": "artesano-market",
         "title": "ArtesanoMarket",
         "description": "Aplicación web e-Commerce para productos artesanales hechos a mano. Incluye catálogo de productos, carro de compras, generación de facturas electrónicas, autenticación de usuarios y personalización de perfil. Los usuarios pueden publicar sus propios productos. Incluye panel administrativo protegido para gestionar usuarios, pedidos y productos.",

@@ -4,7 +4,10 @@ import { useTranslation } from 'react-i18next';
 const Header: React.FC = () => {
   const location = useLocation();
   const { t, i18n } = useTranslation();
-  const currentPage = location.pathname === '/' ? 'home' : location.pathname.replace('/', '');
+  const currentPath = location.pathname;
+  const currentPage = currentPath === '/' ? 'home' : 
+                      currentPath.startsWith('/projects') ? 'projects' : 
+                      currentPath.replace('/', '');
 
   const getNavLinkClass = (page: string) => {
     const baseClass = "transition-colors duration-200";

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ScrollReveal from './ScrollReveal';
+import Header from './Header';
 
 interface ProjectDetailProps {
   projectId?: string;
@@ -21,31 +22,21 @@ interface Project {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId }) => {
   const params = useParams<{ projectId: string }>();
   const projectId = propProjectId || params.projectId;
-  const { t, i18n } = useTranslation();
-  const [currentPage, setCurrentPage] = useState('projects');
-  const isSpanish = i18n.resolvedLanguage === 'es';
+  const { t } = useTranslation();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImage) {
+        setSelectedImage(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage]);
 
   const projects = t('projects.list', { returnObjects: true }) as Project[];
   const project = projects.find(p => p.id === projectId);
-
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
-  };
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/projects')) {
-      setCurrentPage('projects');
-    }
-  }, []);
-
-  const getNavLinkClass = (page: string) => {
-    const baseClass = "transition-colors duration-200";
-    if (currentPage === page) {
-      return `${baseClass} text-purple-400 font-semibold`;
-    }
-    return `${baseClass} hover:text-purple-400`;
-  };
 
   if (!project) {
     return (
@@ -60,39 +51,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-gray-900 text-white py-4 px-6 shadow-lg">
-        <div className="container mx-auto flex justify-between items-center">
-          <Link to="/">
-            <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
-          </Link>
-          <nav>
-            <ul className="flex space-x-6 items-center">
-              <li><Link to="/" className={getNavLinkClass('home')}>{t('nav.home')}</Link></li>
-              <li><Link to="/projects" className={getNavLinkClass('projects')}>{t('nav.projects')}</Link></li>
-              <li>
-                <button
-                  onClick={toggleLanguage}
-                  className="ml-4 relative inline-flex h-8 w-16 items-center rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 transition-colors hover:from-purple-600 hover:to-indigo-700"
-                >
-                  <span className={`absolute left-2 text-xs font-thin ${isSpanish ? 'text-white/40' : 'text-white font-bold'}`}>EN</span>
-                  <span className={`absolute right-2 text-xs font-thin ${isSpanish ? 'text-white font-bold' : 'text-white/40'}`}>ES</span>
-                  <span
-                    className={`${
-                      isSpanish ? 'translate-x-9' : 'translate-x-1'
-                    } inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-bold text-gray-900 transition-transform`}
-                  >
-                    {isSpanish ? 'ES' : 'EN'}
-                  </span>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Project Content */}
-      <main className="container mx-auto max-w-6xl px-6 py-12">
+      <main className="container mx-auto max-w-6xl px-6 py-12 pt-24">
         <ScrollReveal>
           <h1 className="text-5xl font-bold text-gray-800 mb-8">{project.title}</h1>
         </ScrollReveal>
@@ -131,24 +93,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
           </section>
         </ScrollReveal>
 
-        <ScrollReveal delay={800}>
-          <section className="mb-12">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.screenshots')}</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {project.screenshots.map((screenshot, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-4">
-                  <img 
-                    src={screenshot} 
-                    alt={`Screenshot ${index + 1}`}
-                    className="w-full h-auto rounded-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        <ScrollReveal delay={1000}>
+        <ScrollReveal delay={600}>
           <section className="mb-12">
             <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.links')}</h2>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -175,7 +120,44 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
             </div>
           </section>
         </ScrollReveal>
+
+        <ScrollReveal delay={800}>
+          <section className="mb-12">
+            <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.screenshots')}</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.screenshots.map((screenshot, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onClick={() => setSelectedImage(screenshot)}>
+                  <img 
+                    src={screenshot} 
+                    alt={`Screenshot ${index + 1}`}
+                    className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        </ScrollReveal>
       </main>
+
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img 
+            src={selectedImage} 
+            alt="Full size screenshot" 
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

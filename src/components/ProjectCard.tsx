@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 interface ProjectCardProps {
@@ -20,13 +21,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techn
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
       {image && (
-        <div className="w-full h-48 overflow-hidden">
+        <Link to={`/projects/${id}`} className="block w-full h-48 overflow-hidden">
           <img 
             src={image} 
             alt={title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:opacity-90 transition-opacity"
           />
-        </div>
+        </Link>
       )}
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-3 text-gray-800">{title}</h3>
