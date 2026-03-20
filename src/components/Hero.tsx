@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          Juan Carlos Jerez Velásquez
+          Juan Jerez V.
         </h1>
         
         <p 
