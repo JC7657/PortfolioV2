@@ -25,10 +25,45 @@
     "viewDetails": "View Project Details →",
     "list": [
       {
+        "id": "deskit-helpdesk",
+  "title": "DeskIT (WIP)",
+  "description": "Enterprise-grade IT Helpdesk ticketing system, currently in development. Focused on high-density data management, contextual workflows, and defensive UX design to streamline incident resolution for support agents.",
+  "technologies": [
+    "ASP.NET Core",
+    "PostgreSQL",
+    "Next.js",
+    "React",
+    "TailwindCSS"
+  ],
+  "features": [
+    "High-density data table for efficient ticket triaging",
+    "Contextual resolution drawers (side-by-side workflow)",
+    "Dynamic activity feed with responsive timeline architecture",
+    "Integrated Rich Text Editor",
+    "Defensive UI design (Error prevention for Internal vs. Public Notes)",
+    "Adaptive and collapsible navigation sidebar"
+  ],
+  "image": "/DeskIT/Home.png",
+  "screenshots": ["/DeskIT/Home.png", "/DeskIT/Create.png", "/DeskIT/TicketModal.png", "/DeskIT/Workflow.webm"],
+  "liveUrl": "",
+  "repoUrl": ""
+      },
+      {
         "id": "ygo-ai-link",
         "title": "YGO Ai Link",
         "description": "Web application that combines a Yu-Gi-Oh! card database with an AI-powered chat assistant. Users can browse and search a comprehensive card database, chat with an AI assistant (Ai/Dark Ignis) to learn about cards, archetypes, mechanics, and strategies, and get explanations on concepts like handtraps, omni negates, endboards, deck archetypes, and more.",
-        "technologies": ["Next.js 16", "React 19", "Tailwind CSS 4", "TypeScript", "Heroicons", "TanStack Query", "Express", "PostgreSQL", "Groq SDK", "Yugipedia API"],
+        "technologies": [
+          "Next.js 16",
+          "React 19",
+          "Tailwind CSS 4",
+          "TypeScript",
+          "Heroicons",
+          "TanStack Query",
+          "Express",
+          "PostgreSQL",
+          "Groq SDK",
+          "Yugipedia API"
+        ],
         "features": [
           "Card Database - Searchable catalog with filtering by type, attribute, level, etc.",
           "AI Chat Assistant - Contextual AI responses powered by Groq LLM",
@@ -50,7 +85,15 @@
         "id": "artesano-market",
         "title": "ArtesanoMarket",
         "description": "E-commerce web application for handcrafted products. Features product catalog, shopping cart, electronic invoice generation, user authentication, and profile customization. Users can publish their own products. Includes protected admin panel for managing users, orders, and products.",
-        "technologies": ["React", "Vite", "TailwindCSS", "Express", "MongoDB", "Cloudinary", "Passport"],
+        "technologies": [
+          "React",
+          "Vite",
+          "TailwindCSS",
+          "Express",
+          "MongoDB",
+          "Cloudinary",
+          "Passport"
+        ],
         "features": [
           "Product catalog with search and filtering",
           "Shopping cart functionality",
@@ -87,9 +130,7 @@
           "ASCII-based labyrinth display"
         ],
         "image": "/MazeSolver_Screenshots/Screenshot_Laberinto.png",
-        "screenshots": [
-          "/MazeSolver_Screenshots/Screenshot_Laberinto.png"
-        ],
+        "screenshots": ["/MazeSolver_Screenshots/Screenshot_Laberinto.png"],
         "liveUrl": "https://jc7657.github.io/Maze-solver/",
         "repoUrl": "https://github.com/JC7657/Maze-solver"
       }

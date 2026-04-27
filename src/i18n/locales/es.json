@@ -25,10 +25,45 @@
     "viewDetails": "Ver Detalles del Proyecto →",
     "list": [
       {
+        "id": "deskit-helpdesk",
+        "title": "DeskIT (WIP)",
+        "description": "Sistema de tickets de soporte IT de nivel empresarial, actualmente en desarrollo. Centrado en la gestión de datos de alta densidad, flujos de trabajo contextuales y diseño de UX defensivo para agilizar la resolución de incidentes por parte de los agentes.",
+        "technologies": [
+    "ASP.NET Core",
+    "PostgreSQL",
+    "Next.js",
+    "React",
+    "TailwindCSS"
+  ],
+        "features": [
+          "Tabla de datos de alta densidad para clasificación eficiente de tickets",
+          "Drawers de resolución contextuales (flujo de trabajo sin pérdida de contexto)",
+          "Historial de actividad dinámico con arquitectura de línea de tiempo responsiva",
+          "Editor de texto enriquecido (Rich Text Editor) integrado",
+          "Diseño UI defensivo (Prevención de errores en Notas Internas vs. Públicas)",
+          "Barra de navegación lateral adaptativa y colapsable"
+        ],
+        "image": "/DeskIT/Home.png",
+        "screenshots": ["/DeskIT/Home.png","/DeskIT/Create.png", "/DeskIT/TicketModal.png" ,"/DeskIT/Workflow.webm"],
+        "liveUrl": "",
+        "repoUrl": ""
+      },
+      {
         "id": "ygo-ai-link",
         "title": "YGO Ai Link",
         "description": "Aplicación web que combina una base de datos de cartas de Yu-Gi-Oh! con un asistente de chat impulsado por IA. Los usuarios pueden navegar y buscar en un extenso catálogo de cartas, chatear con un asistente de IA (Ai/Dark Ignis) para aprender sobre cartas, arquetipos, mecánicas y estrategias, y obtener explicaciones sobre conceptos como handtraps, omni negates, endboards, arquetipos de mazo y más.",
-        "technologies": ["Next.js 16", "React 19", "Tailwind CSS 4", "TypeScript", "Heroicons", "TanStack Query", "Express", "PostgreSQL", "Groq SDK", "Yugipedia API"],
+        "technologies": [
+          "Next.js 16",
+          "React 19",
+          "Tailwind CSS 4",
+          "TypeScript",
+          "Heroicons",
+          "TanStack Query",
+          "Express",
+          "PostgreSQL",
+          "Groq SDK",
+          "Yugipedia API"
+        ],
         "features": [
           "Base de Datos de Cartas - Catálogo buscable con filtros por tipo, atributo, nivel, etc.",
           "Asistente de Chat con IA - Respuestas contextuales impulsadas por Groq LLM",
@@ -49,7 +84,15 @@
         "id": "artesano-market",
         "title": "ArtesanoMarket",
         "description": "Aplicación web e-Commerce para productos artesanales hechos a mano. Incluye catálogo de productos, carro de compras, generación de facturas electrónicas, autenticación de usuarios y personalización de perfil. Los usuarios pueden publicar sus propios productos. Incluye panel administrativo protegido para gestionar usuarios, pedidos y productos.",
-        "technologies": ["React", "Vite", "TailwindCSS", "Express", "MongoDB", "Cloudinary", "Passport"],
+        "technologies": [
+          "React",
+          "Vite",
+          "TailwindCSS",
+          "Express",
+          "MongoDB",
+          "Cloudinary",
+          "Passport"
+        ],
         "features": [
           "Catálogo de productos con búsqueda y filtros",
           "Funcionalidad de carro de compras",
@@ -86,9 +129,7 @@
           "Visualización de laberintos basada en ASCII"
         ],
         "image": "/MazeSolver_Screenshots/Screenshot_Laberinto.png",
-        "screenshots": [
-          "/MazeSolver_Screenshots/Screenshot_Laberinto.png"
-        ],
+        "screenshots": ["/MazeSolver_Screenshots/Screenshot_Laberinto.png"],
         "liveUrl": "https://jc7657.github.io/Maze-solver/",
         "repoUrl": "https://github.com/JC7657/Maze-solver"
       }

@@ -23,17 +23,19 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
   const params = useParams<{ projectId: string }>();
   const projectId = propProjectId || params.projectId;
   const { t } = useTranslation();
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && selectedImage) {
-        setSelectedImage(null);
+      if (e.key === 'Escape' && selectedMedia) {
+        setSelectedMedia(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage]);
+  }, [selectedMedia]);
+
+  const isVideo = (src: string) => src.endsWith('.webm') || src.endsWith('.mp4') || src.endsWith('.mov');
 
   const projects = t('projects.list', { returnObjects: true }) as Project[];
   const project = projects.find(p => p.id === projectId);
@@ -93,6 +95,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
           </section>
         </ScrollReveal>
 
+        {(project.liveUrl || project.repoUrl) && (
         <ScrollReveal delay={600}>
           <section className="mb-12">
             <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.links')}</h2>
@@ -120,18 +123,28 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
             </div>
           </section>
         </ScrollReveal>
+        )}
 
         <ScrollReveal delay={800}>
           <section className="mb-12">
             <h2 className="text-3xl font-semibold text-gray-800 mb-6">{t('projectDetail.screenshots')}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {project.screenshots.map((screenshot, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onClick={() => setSelectedImage(screenshot)}>
-                  <img 
-                    src={screenshot} 
-                    alt={`Screenshot ${index + 1}`}
-                    className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
-                  />
+                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onClick={() => setSelectedMedia(screenshot)}>
+                  {isVideo(screenshot) ? (
+                    <video 
+                      src={screenshot}
+                      className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
+                      muted
+                      onClick={(e) => e.preventDefault()}
+                    />
+                  ) : (
+                    <img 
+                      src={screenshot} 
+                      alt={`Screenshot ${index + 1}`}
+                      className="w-full h-64 object-cover hover:opacity-90 transition-opacity"
+                    />
+                  )}
                 </div>
               ))}
             </div>
@@ -139,23 +152,33 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projectId: propProjectId 
         </ScrollReveal>
       </main>
 
-      {selectedImage && (
+      {selectedMedia && (
         <div 
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedMedia(null)}
         >
           <button 
             className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 transition-colors"
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedMedia(null)}
           >
             &times;
           </button>
-          <img 
-            src={selectedImage} 
-            alt="Full size screenshot" 
-            className="max-w-full max-h-[90vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {isVideo(selectedMedia) ? (
+            <video 
+              src={selectedMedia}
+              controls
+              autoPlay
+              className="max-w-full max-h-[90vh] rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          ) : (
+            <img 
+              src={selectedMedia} 
+              alt="Full size screenshot" 
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
         </div>
       )}
     </div>

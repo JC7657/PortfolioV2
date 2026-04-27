@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const CV_URLS = {
-  en: 'https://docs.google.com/document/d/1vTrm23iDnV9MJU-W_unKA7SwPrSy7ADdzx6ylicITJE/edit?tab=t.0#heading=h.upetirzakp20',
-  es: 'https://docs.google.com/document/d/1GKhgva-rrV38QVZ1ife278JgRtmlngYSxlfpWH3TZVU/edit?tab=t.0#heading=h.upetirzakp20'
+  en: 'https://docs.google.com/document/d/1DTHSuyP60faNl9Poy9BY5q9fydGjSjQu_HlDpSREDg4',
+  es: 'https://docs.google.com/document/d/1ABaEt9b_o9D_h-JVT8VzzOrlVD30uSwoKzi9Kdbdrkc'
 };
 
 const Hero: React.FC = () => {
